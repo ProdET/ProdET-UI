@@ -3,8 +3,10 @@ import useStore from '@/hooks/store';
 import { useEffect } from 'react';
 import Header from '@/config';
 import DomLayout from '@/components/layout/dom';
-import '@/styles/global.css';
 import CanvasLayout from '@/components/layout/canvas';
+
+import '@/styles/global.css';
+import '@sample-data';
 
 function App({ Component, pageProps = { title: 'index' } }) {
   const router = useRouter();
