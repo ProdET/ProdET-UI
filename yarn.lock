@@ -3540,6 +3540,11 @@ isexe@^2.0.0:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
 
+iso3166-2-db@^2.3.10:
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/iso3166-2-db/-/iso3166-2-db-2.3.10.tgz#5c35e1c7e5766da7488e82d25a37c23ca74a6090"
+  integrity sha512-dxst2s+iB9wm2Lnh1Q2U9mfO4PnMkMvGR2wXKPtTKAm/o2rRsru8gLQUnG6kaR+vZmX2YQVi5UIsSNofb8U7Mw==
+
 jest-worker@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.9.0.tgz#5dbfdb5b2d322e98567898238a9697bcce67b3e5"

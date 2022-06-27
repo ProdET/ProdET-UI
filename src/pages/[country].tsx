@@ -1,5 +1,10 @@
+import { useCountryData } from '@/hooks/useCountryData';
+import listOfCountries from 'iso3166-2-db';
+
 // dom components goes here
-const Country = (props: any) => {
+const Country = () => {
+  const country = useCountryData('canada').data;
+
   return <></>;
 };
 
@@ -8,10 +13,15 @@ Country.r3f = (props: any) => <></>;
 
 export default Country;
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
+  const listOfCountries = ['/Canada'];
+  return { paths: listOfCountries, fallback: false };
+}
+
+export async function getStaticProps({ params }) {
   return {
     props: {
-      title: 'Index',
+      title: '',
     },
   };
 }
