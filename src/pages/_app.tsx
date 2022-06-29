@@ -3,8 +3,13 @@ import useStore from '@/hooks/store';
 import { useEffect } from 'react';
 import Header from '@/config';
 import DomLayout from '@/components/layout/dom';
-import '@/styles/global.css';
 import CanvasLayout from '@/components/layout/canvas';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+import '@/styles/global.css';
+import '@/sample-data';
+
+const queryClient = new QueryClient();
 
 function App({ Component, pageProps = { title: 'index' } }) {
   const router = useRouter();
@@ -14,15 +19,17 @@ function App({ Component, pageProps = { title: 'index' } }) {
   }, [router]);
 
   return (
-    <>
-      <Header title={pageProps.title} />
-      <DomLayout>
-        <Component {...pageProps} />
-      </DomLayout>
-      {Component?.r3f && (
-        <CanvasLayout>{Component.r3f(pageProps)}</CanvasLayout>
-      )}
-    </>
+    <QueryClientProvider client={queryClient}>
+      <>
+        <Header title={pageProps.title} />
+        <DomLayout>
+          <Component {...pageProps} />
+        </DomLayout>
+        {Component?.r3f && (
+          <CanvasLayout>{Component.r3f(pageProps)}</CanvasLayout>
+        )}
+      </>
+    </QueryClientProvider>
   );
 }
 
