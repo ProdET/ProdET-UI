@@ -18,8 +18,8 @@ const Page = (props: any) => {
     <>
       <ul>
         <li>
-          <Link href='/[country]' as={`/unitedstates`}>
-            <a>goes to /unitedstates</a>
+          <Link href='/[country]' as={`/united-states`}>
+            <a>goes to /united-states</a>
           </Link>
         </li>
         <li>
