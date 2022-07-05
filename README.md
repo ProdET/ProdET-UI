@@ -1,3 +1,2 @@
-# ProdET-UI
-
-This project was bootstrapped with [`create-r3f-app`](https://github.com/utsuboco/create-r3f-app)
+<img src="images/ProdET-logo.png" alt="logo" width="400"/>\
+The Product Emission Tracker (ProdET) helps consumers make ethical purchasing decisions based on the limitation of individual ecological footprint.
