@@ -4,15 +4,17 @@ import Instructions from '@/components/dom/Instructions';
 import Shader from '@/components/canvas/Shader/Shader';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
+import axios from 'axios';
 
 // Dynamic import is used to prevent a payload when the website start that will include threejs r3f etc..
 // WARNING ! errors might get obfuscated by using dynamic import.
 // If something goes wrong go back to a static import to show the error.
 // https://github.com/pmndrs/react-three-next/issues/49
-
+axios.defaults.baseURL = process.env.API_URL;
 // dom components goes here
 const Page = (props: any) => {
   const router = useRouter();
+  axios.defaults.baseURL = process.env.API_URL;
 
   return (
     <>

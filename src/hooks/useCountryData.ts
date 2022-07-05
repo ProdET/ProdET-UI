@@ -3,6 +3,7 @@ import { useQuery, UseQueryOptions } from 'react-query';
 
 interface CountryResponse {
   name: string;
+  population: number;
   carbonEmissions: string;
 }
 
